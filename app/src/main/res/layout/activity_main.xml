@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/getweather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|bottom"
+        android:text="Find dogs you might like" />
+
+    <EditText
+        android:id="@+id/inputedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NAME" />
+
+    <EditText
+        android:id="@+id/inputedit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birth Place" />
+
+    <EditText
+        android:id="@+id/inputedit3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:hint="Current Location" />
+
+</LinearLayout>
