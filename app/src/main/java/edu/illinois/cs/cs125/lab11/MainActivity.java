@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -128,7 +129,9 @@ public final class MainActivity extends AppCompatActivity {
                                 i++;
                             }
                             Log.d(TAG,Integer.toString(count));
-                            Toast.makeText(MainActivity.this, aa+", "+bb+", "+cc, Toast.LENGTH_SHORT).show();
+                            final TextView tv = findViewById(R.id.textView);
+                            tv.setText(aa+", "+bb+", "+cc);
+                            //Toast.makeText(MainActivity.this, aa+", "+bb+", "+cc, Toast.LENGTH_SHORT).show();
                         }
                     }, new Response.ErrorListener() {
                         @Override

@@ -34,4 +34,11 @@
         android:gravity="center_vertical"
         android:hint="Current Location" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:text="Cute Dogs!!!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
 </LinearLayout>
