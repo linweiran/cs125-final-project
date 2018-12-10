@@ -66,7 +66,7 @@ public final class MainActivity extends AppCompatActivity {
                 c = c % 150;
                 if (a == b) b++;
                 if (b == c) c++;
-                startAPICall("192.17.96.8",a,b,c);
+                startAPICall(a,b,c);
                 //Toast.makeText(MainActivity.this, Integer.toString(a)+Integer.toString(b)+Integer.toString(c), Toast.LENGTH_SHORT).show();
             }
         });
@@ -87,7 +87,7 @@ public final class MainActivity extends AppCompatActivity {
      *
      *ipAddress IP address to look up
      */
-    void startAPICall(final String ipAddress, final int a, final int b, final int c) {
+    void startAPICall(final int a, final int b, final int c) {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
@@ -99,9 +99,9 @@ public final class MainActivity extends AppCompatActivity {
                             //apiCallDone(response);
                             Log.d(TAG, response.toString());
                             String k = response.toString();
-                            String aa="dakfjadkj";
-                            String bb="uqgiuGUI";
-                            String cc="SIUHRIOSUH";
+                            String aa="by";
+                            String bb="default";
+                            String cc="value";
                             String l="";
                             int count = 0;
                             boolean x = false;
@@ -146,64 +146,7 @@ public final class MainActivity extends AppCompatActivity {
         }
     }
 
-   /* void startAPICall() {
-        final String[] k = new String[1];
-        try {
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
 
-                    Request.Method.GET,
-                    "https://dog.ceo/api/breeds/list/all",
-                    null,
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(final JSONObject response) {
-                            Log.d(TAG, response.toString());
-                            k[0] = response.toString();
-                            Log.d(TAG, "tag");
-                            Log.d(TAG, k[0]);
-
-                            String l="";
-                            int count = 0;
-                            boolean x = false;
-                            int i = 0;
-                            while (i < k[0].length()) {
-                                if (k[0].charAt(i) == '"') {
-                                    if (x == false) {
-                                        x= true;
-                                    }   else {
-                                        Log.d(TAG, l);
-                                        l = "";
-                                        count++;
-                                        x = false;
-                                    }
-                                    i++;
-                                    continue;
-                                }
-                                if (x) {
-                                    l += k[0].charAt(i);
-                                }
-                                i++;
-                            }
-                            Log.d(TAG,Integer.toString(count));
-
-
-
-                        }
-                    }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(final VolleyError error) {
-                    Log.w(TAG, error.toString());
-                }
-            });
-            requestQueue.add(jsonObjectRequest);
-            requestQueue.getCache();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-    } */
 
 
 
